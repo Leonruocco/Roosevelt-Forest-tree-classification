@@ -8,7 +8,7 @@ The first dataset we will work with is the Palmer Island Penguins dataset which 
 https://allisonhorst.github.io/palmerpenguins/articles/intro.html
 although the contents of the webpage pertain to analysis in R. 
 
-The first notebook we use here is 'Penguin_classification.ipynb'.
+The first notebook we use here is 'Penguin_classification.ipynb_NN'.
 
 We beging with some data exploration to get a feel for what our labels and features are. We evidently have a target label of 'species' with 6 features to use for classification. The features take on numeric and categorical values and will need some data pre-processing to prepare for feeding in to a model.
 
