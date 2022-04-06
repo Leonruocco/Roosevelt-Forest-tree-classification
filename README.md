@@ -1,7 +1,7 @@
 # Classification
 Multi-class classification of various datasets using NNs, decision tress and SVMs
 
-In this project we train a variety of ML models, suited towards classification tasks, on different datasets. We learn about the importance of pre-processing your data as well as careful selection of models in order to achieve high prediction accuracies, avoid overfitting training data and maintaining interpretability of our models. 
+In this project we train a variety of ML models, suited towards classification tasks, on different datasets. We learn about the importance of pre-processing your data as well as careful selection of models in order to achieve high prediction accuracies, avoid overfitting training data and maintaining interpretability of our models. We also learn the importance of performing k-fold cross-validation on models trained on relatively small datasets--as we have here--and the methods' utility in optimising hyperparameters towards improving model accuracy on unseen data and avoiding overfitting.
 
 # Palmer-penguins dataset
 The first dataset we will work with is the Palmer Island Penguins dataset which contains size measurments for three different penguin species observed on three islands in the Palmer Islands, Antartica. Some information about the dataset can be found here
