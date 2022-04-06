@@ -29,4 +29,10 @@ Looking at the confusion matrix we can see the the Adelie penguin class is most 
 
 We also train separate models on the standardised data as wel as the raw, un-scaled data also for comparions. Looking at the three RMSEs we see that the models trained on scaled data perform much better than the raw data trained model, with the standardisation method wining out albeit with a suspicously perfect RMSE of 0. This bears closer inspection.
 
+# Cross validation and grid-searching hyperparameters with Penguin_classification_NN.ipynb
 
+The Palmer penguin dataset is very small and so, in this file we perform cross-validation (CV) on our neural-network model trained on the penguin dataset to attempt to get a better idea of how well it will perform on un-seen data. The results of a stratified k-fold CV suggests the model still performs quite well, with a 99% accuracy. 
+
+We also perform hyperparameter tuning with GridSearchCV to test a few parameters such as batch size, epoch number and optimisers. Using the results of this search we then train a NN and test it on our hold-out set. 
+
+The NN is still performing suspiciously well, so we're going to take a bit of a tangent here and try out a different dataset.
