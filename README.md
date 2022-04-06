@@ -8,8 +8,9 @@ The first dataset we will work with is the Palmer Island Penguins dataset which 
 https://allisonhorst.github.io/palmerpenguins/articles/intro.html
 although the contents of the webpage pertain to analysis in R. 
 
-The first notebook we use here is 'Penguin_classification_explore.ipynb'.
+The first notebook we use here is 'Penguin_classification_explore.ipynb'. Here we explore the dataset, do some data preprocessing and fit a neural network. We also compare some different data preprocessing scaling methods. 
 
+# Data exploration with Penguin_classification_explore.ipynb
 We beging with some data exploration to get a feel for what our labels and features are. We evidently have a target label of 'species' with 6 features to use for classification. The features take on numeric and categorical values and will need some data pre-processing to prepare for feeding in to a model.
 
 We also notice the limited size of the dataset so we attempt to mitigate this (however futile this may be) by oversampling it by a factor of 3. 
