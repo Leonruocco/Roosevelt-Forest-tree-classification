@@ -28,3 +28,5 @@ After training the model we inspect the models performance plotting the training
 Looking at the confusion matrix we can see the the Adelie penguin class is most accurately predicted. 
 
 We also train separate models on the standardised data as wel as the raw, un-scaled data also for comparions. Looking at the three RMSEs we see that the models trained on scaled data perform much better than the raw data trained model, with the standardisation method wining out albeit with a suspicously perfect RMSE of 0. This bears closer inspection.
+
+
