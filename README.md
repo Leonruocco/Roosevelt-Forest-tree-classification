@@ -1,7 +1,9 @@
 # Classification
 Multi-class classification of various datasets using NNs, decision tress and SVMs
 
-In this project we train a variety of ML models, suited towards classification tasks, on different datasets. We learn about the importance of pre-processing your data as well as careful selection of models in order to achieve high prediction accuracies, avoid overfitting training data and maintaining interpretability of our models. We also learn the importance of performing k-fold cross-validation on models trained on relatively small datasets--as we have here--and the methods' utility in optimising hyperparameters towards improving model accuracy on unseen data and avoiding overfitting.
+In this project we train a variety of ML models, suited towards classification tasks, on different datasets. We learn about the importance of pre-processing your data as well as careful selection of models in order to achieve high prediction accuracies, avoid overfitting training data and maintaining interpretability of our models. We also see the importance of performing k-fold cross-validation, especially on models trained on relatively small datasets as well as optimising hyperparameters towards improving model accuracy on unseen data and avoiding overfitting.
+
+One of the main take-home messages from this project was appreciating the importance of simplicity and interpretability in model selection. Sometimes simple is better, and we see this in particular in our exploration of the the Roosevelt Forest dataset. We find that a simple Knn-classifier performs remarkably well, achieving high testing accuracy scores while maintaing interpretability such that feature importance can be well evaluated. 
 
 # Palmer-penguins dataset
 The first dataset we will work with is the Palmer Island Penguins dataset which contains size measurments for three different penguin species observed on three islands in the Palmer Islands, Antartica. Some information about the dataset can be found here
@@ -36,3 +38,19 @@ The Palmer penguin dataset is very small and so, in this file we perform cross-v
 We also perform hyperparameter tuning with GridSearchCV to test a few parameters such as batch size, epoch number and optimisers. Using the results of this search we then train a NN and test it on our hold-out set. 
 
 The NN is still performing suspiciously well, so we're going to take a bit of a tangent here and try out a different dataset.
+
+# Roosevelt Forest dataset: Roosevelt_forest_cover_knnClassifier
+In this notebook we analyse a dataset containing tree observations from four areas of the Roosevelt National Forest. In contrast to the penguin dataset,
+this is a very large dataset with over 50k entries and a large number of features (55). 
+
+The dataset is very clean and requires no pre-processing clean-up so we jump straight in to EDA in terms of studying the feature distributions. There are both continuous numeric data distributuions and a large number of already one-hot-encoded categorical features. There is up to a 5-order-of-magnitude difference in number of entries between feature columns and a large range of standard deviations indicating that some form of principle-component-analysis will be applicable here.
+
+We take a simple approach at first and simply remove the columns with a standard-deviation less than 0.3, the reasoning being that; high variance data contains more information producing more trainable models. This also helps substantially reduce runtimes. The feature distributions are also scaled with normalisation and standardisation for later comparison.
+
+Analysing the results of a Knn-classifier on all columns with std-devs>0.3, compared to just the continuous numeric data columns, suggests that the inclusion of the extra high-variance categorical feature columns adds sufficient trainability to the model with higher testing accuracies. k-fold cross-validation (CV) confirms this.
+
+Interestingly, we find that the testing accuracies for CV performed on the raw data actually produces the highest testing accuriacies, with the normaliston scaled data performing better than the standardised data---as one might expect given the skewed nature of the distribtuions. Nevertheless, the performance of the unscaled data is surprising and bears closer inspection. 
+
+This is further explored by varying the number of k-neighest neighbors. The scaled data appears to outperform the raw data for higher k-values, but the other way around for low-k values, suggesting this discrepancy is likely not due to an overfitting problem i.e. one would expect overfitting to be a problem at higher k-values.
+
+All-in-all the highest testing accuracy achieved, with CV, was 0.97%.
