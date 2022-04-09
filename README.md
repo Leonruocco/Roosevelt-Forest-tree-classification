@@ -3,7 +3,11 @@ Multi-class classification of various datasets using NNs, decision tress and SVM
 
 In this project we train a variety of ML models, suited towards classification tasks, on different datasets. We learn about the importance of pre-processing your data as well as careful selection of models in order to achieve high prediction accuracies, avoid overfitting training data and maintaining interpretability of our models. We also see the importance of performing k-fold cross-validation, especially on models trained on relatively small datasets as well as optimising hyperparameters towards improving model accuracy on unseen data and avoiding overfitting.
 
-One of the main take-home messages from this project was appreciating the importance of simplicity and interpretability in model selection. Sometimes simple is better, and we see this in particular in our exploration of the the Roosevelt Forest dataset. We find that a simple Knn-classifier performs remarkably well, achieving high testing accuracy scores while maintaing interpretability such that feature importance can be well evaluated. 
+One of the main take-home messages from this project was appreciating the importance of simplicity and interpretability in model selection. Sometimes the 'simpler the better' is the best approach, and we see this in particular in our exploration of the the Roosevelt Forest dataset. We find that a simple Knn-classifier performs remarkably well, achieving high testing accuracy scores while maintaing interpretability such that feature importance can be well evaluated. 
+
+To begin with, we start out with a simple classification training excercise using the very small Palmer-Penguins dataset and see the futility of using overly-complex models like neural-networks to train on such datasets. 
+
+We then take a more serius approach to the much larger Roosevelt Forest dataset, and see how even a simple k-nearest-neighbors classifier can perform remarkbly well.
 
 # Palmer-penguins dataset
 The first dataset we will work with is the Palmer Island Penguins dataset which contains size measurments for three different penguin species observed on three islands in the Palmer Islands, Antartica. Some information about the dataset can be found here
