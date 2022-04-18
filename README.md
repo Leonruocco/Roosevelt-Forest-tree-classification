@@ -7,7 +7,7 @@ One of the main take-home messages from this project was appreciating the import
 
 To begin with, we start out with a simple classification training excercise using the very small Palmer-Penguins dataset and see the futility of using overly-complex models like neural-networks to train on such datasets. 
 
-We then take a more serius approach to the much larger Roosevelt Forest dataset, and see how even a simple k-nearest-neighbors classifier can perform remarkbly well.
+We then take a more serius approach to the much larger Roosevelt Forest dataset, and see how even a simple k-nearest-neighbors classifier can perform remarkbly well. We go on to perform some feature engineering as well as evaluating the models performance for various k-values. We see that the simpler models, with higher k-values, produce more consistent results despite slightly lower training accuracies.
 
 # Palmer-penguins dataset
 The first dataset we will work with is the Palmer Island Penguins dataset which contains size measurments for three different penguin species observed on three islands in the Palmer Islands, Antartica. Some information about the dataset can be found here
@@ -17,7 +17,7 @@ although the contents of the webpage pertain to analysis in R.
 The first notebook we use here is 'Penguin_classification_explore.ipynb'. Here we explore the dataset, do some data preprocessing and fit a neural network. We also compare some different data preprocessing scaling methods. 
 
 # Data exploration with Penguin_classification_explore.ipynb
-We beging with some data exploration to get a feel for what our labels and features are. We evidently have a target label of 'species' with 6 features to use for classification. The features take on numeric and categorical values and will need some data pre-processing to prepare for feeding in to a model.
+We begin with some data exploration to get a feel for what our labels and features are. We evidently have a target label of 'species' with 6 features to use for classification. The features take on numeric and categorical values and will need some data pre-processing to prepare for feeding in to a model.
 
 We also notice the limited size of the dataset so we attempt to mitigate this (however futile this may be) by oversampling it by a factor of 3. 
 
