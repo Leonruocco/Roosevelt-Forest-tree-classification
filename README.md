@@ -55,6 +55,6 @@ Analysing the results of a Knn-classifier on all columns with std-devs>0.3, comp
 
 Interestingly, we find that the testing accuracies for CV performed on the raw data actually produces the highest testing accuriacies, with the normaliston scaled data performing better than the standardised data---as one might expect given the skewed nature of the distribtuions. Nevertheless, the performance of the unscaled data is surprising and bears closer inspection. 
 
-This is further explored by varying the number of k-neighest neighbors. The scaled data appears to outperform the raw data for higher k-values, but the other way around for low-k values, suggesting this discrepancy is likely not due to an overfitting problem i.e. one would expect overfitting to be a problem at higher k-values.
+This is further explored by varying the number of k-neighest neighbors. The scaled data appears to outperform the raw data for higher k-values, but the other way around for low-k values, suggesting this discrepancy is likely due to an overfitting problem as low-k value models are more complex. In the interest of producing generalisable models, one is inlined to choice a high k-value here for a simpler model that is less likely to overfit. 
 
 All-in-all the highest testing accuracy achieved, with CV, was 0.97%.
