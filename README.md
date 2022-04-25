@@ -1,4 +1,4 @@
-# Classification
+# Roosevelt-Forest tree classification
 Multi-class classification of high-dimensionality, many-sample dataset using knn-classifiers and tree-based classifiers.
 
 In this project we train a variety of ML models, suited towards classification tasks, on the Roosevelt Forest Dataset which contains labelled data of tree type observations. The purpose of this classification excercise is to predict the type of tree based upon its attributes. 
